@@ -14,10 +14,16 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "yarn run relay && react-scripts start",
+    "build": "yarn run relay && react-scripts build",
+    "relay": "yarn run relay-compiler",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "relay": {
+    "src": "./src/",
+    "schema": "./schema.graphql",
+    "language": "javascript"
   },
   "eslintConfig": {
     "extends": [
